@@ -22,6 +22,8 @@
             
             <p>Welcome!</p>
             
+<a href="login.php">login</a>
+
         <?php }?>
   </div>
 </div>

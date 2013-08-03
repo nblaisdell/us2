@@ -2,6 +2,8 @@
 <?php require_once("incl/db_connection.php"); ?>
 <?php require_once("incl/functions.php"); ?>
 
+<?php confirm_logged_in(); ?>
+
 <?php
     $current_subject = find_subject_by_id($_GET["subject"]);
     if (!$current_subject) {

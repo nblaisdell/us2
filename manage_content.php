@@ -3,6 +3,8 @@
 <?php $layout_context = "admin"; ?>
 <?php require_once("incl/db_connection.php"); ?>
 <?php require_once("incl/functions.php"); ?>
+
+<?php confirm_logged_in(); ?>
 <?php require_once("incl/header.php"); ?>
 <?php include("incl/sidebar.php"); ?>
 <?php find_selected_page(); ?>

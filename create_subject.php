@@ -3,6 +3,8 @@
 <?php require_once("incl/functions.php"); ?>
 <?php require_once("incl/validation_functions.php"); ?>
 
+<?php confirm_logged_in(); ?>
+
 <?php
 if (isset($_POST['submit'])) {
     // Process the form
