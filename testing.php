@@ -1,43 +1,44 @@
-<?php
-$conn = mysql_connect(localhost, admin, root);
-if(!$conn) {
-  die('Could not connect: ' . mysql_error());
-}
-$db_select = mysql_select_db("us2", $conn);
-if(!$db_select) {
-  die('No database selected: ' . mysql_error());
-}
-
-
-
-
-
-?><?php $pagetitle = "testing"; ?>
+<?php $pagetitle = "testing"; ?>
+<?php require_once("incl/db_connection.php"); ?>
 <?php require_once("incl/functions.php"); ?>
-<?php include("incl/header.php"); ?>
+<?php require_once("incl/header.php"); ?>
+<?php include("incl/sidebar.php"); ?>
 
-navigation: |
+<ul class="subjects">
 <?php
+ $query  = "SELECT * FROM subjects WHERE visible = 1 ORDER BY position ASC";
+ $result = mysqli_query($connection, $query);
+// confrim_query($result);  // the above doesn't work at the moment
+?>
+<?php
+while ($subject = mysql_fetch_assoc($result)) { 
+?>
+    <li>
+        <?php echo $subject["menuname"] . " (" . $subject["id"] .")"; ?>
+        <?php
+         $query  = "SELECT * ";
+         $query .= "FROM pages ";
+         $query .= "WHERE visible = 1 ";
+         $query .= "AND subject_id = {$subject["id"]} ";
+         $query .= "ORDER BY position ASC";
+         $result = mysqli_query($connection, $query);
+         // confrim_query($result);
+        ?>
+        <ul class="pages">
 
-
-
-
-$results = mysql_query("SELECT * FROM subjects", $conn);
-if(!$results) {
-  die('Fail: ' . mysql_error());
+        </ul>
+    </li>
+<?php
 }
+?>
+</ul>
 
-while($row = mysql_fetch_array($result)) {
-  echo $row["menuname"]." ".$row["position"]."<br/>";
-}
+<!-- This stuff is me just playing around: -->
+<?php //$output = "SELECT * FROM subjects"?>
+<?php //echo "$output" ?>
+<?php echo "$connectio" ?>
+<?php //echo $subject["menuname"] . "?" ?>
+<!-- I'm about half way through the latest video, where it talks about doubling the stuff that doesn't work to use in the unordered list. -->
 
-
-
-
-
-
-  echo "<br/><br/><br/>".$results."<br/><br/><br/>";
-?> |
-
-<?php include("incl/footer.php"); ?>
-<?php mysql_close($conn); ?>
+<?php mysqli_free_result($result); ?>
+<?php require_once("incl/footer.php"); ?>

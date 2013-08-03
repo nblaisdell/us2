@@ -643,152 +643,13 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-/* Site Colors:
-  #1A446C - blue grey
-  #689DC1 - light blue
-  #D4E6F4 - very light blue
-  #EEE4B9 - light tan
-  #8D0D19 - burgundy
-*/
-/* line 129, ../scss/main.scss */
-html {
-  height: 100%;
-  width: 100%;
-}
-
-/* line 130, ../scss/main.scss */
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 15px;
-  background: #EEE4B9;
-}
-
-/* line 137, ../scss/main.scss */
-img {
-  border: none;
-}
-
-/* line 138, ../scss/main.scss */
-a {
-  color: #8D0D19;
-}
-
-/* line 139, ../scss/main.scss */
-a:hover {
-  color: #1A446C;
-}
-
-/* line 141, ../scss/main.scss */
-#header {
-  height: 70px;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  background: #1A446C;
-  color: #D4E6F4;
-}
-
-/* line 146, ../scss/main.scss */
-#header h1 {
-  padding: 1em;
-  margin: 0;
-}
-
-/* line 147, ../scss/main.scss */
-#main {
-  height: 600px;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background: #EEE4B9;
-}
-
-/* line 152, ../scss/main.scss */
-#footer {
-  clear: both;
-  height: 2em;
-  margin: 0;
-  padding: 1em;
-  text-align: center;
-  background: #1A446C;
-  color: #D4E6F4;
-}
-
-/* Navigation */
-/* line 160, ../scss/main.scss */
-#navigation {
-  float: left;
-  width: 150px;
-  height: 100%;
-  margin: 0;
-  padding: 0 2em;
-  color: #D4E6F4;
-  background: #8D0D19;
-}
-
-/* line 166, ../scss/main.scss */
-#navigation a {
-  color: #D4E6F4;
-  text-decoration: none;
-}
-
-/* line 167, ../scss/main.scss */
-#navigation a:hover {
-  color: #FFFFFF;
-}
-
-/* line 168, ../scss/main.scss */
-ul.subjects {
-  margin: 1em 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-/* line 171, ../scss/main.scss */
-ul.pages {
-  padding-left: 2em;
-  list-style: square;
-}
-
-/* line 172, ../scss/main.scss */
-.selected {
-  font-weight: bold;
-}
-
-/* Page Content */
-/* line 175, ../scss/main.scss */
-#page {
-  float: left;
-  height: 100%;
-  padding-left: 2em;
-  vertical-align: top;
-  background: #EEE4B9;
-}
-
-/* line 180, ../scss/main.scss */
-#page h2 {
-  color: #8D0D19;
-  margin-top: 1em;
-}
-
-/* line 181, ../scss/main.scss */
-#page h3 {
-  color: #8D0D19;
-}
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
 /*
  * Image replacement
  */
-/* line 223, ../scss/main.scss */
+/* line 159, ../scss/main.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -797,7 +658,7 @@ ul.pages {
   *text-indent: -9999px;
 }
 
-/* line 231, ../scss/main.scss */
+/* line 167, ../scss/main.scss */
 .ir:before {
   content: "";
   display: block;
@@ -808,7 +669,7 @@ ul.pages {
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
-/* line 242, ../scss/main.scss */
+/* line 178, ../scss/main.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
@@ -817,7 +678,7 @@ ul.pages {
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
-/* line 251, ../scss/main.scss */
+/* line 187, ../scss/main.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -833,7 +694,7 @@ ul.pages {
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
-/* line 268, ../scss/main.scss */
+/* line 204, ../scss/main.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -847,7 +708,7 @@ ul.pages {
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
-/* line 281, ../scss/main.scss */
+/* line 217, ../scss/main.scss */
 .invisible {
   visibility: hidden;
 }
@@ -863,7 +724,7 @@ ul.pages {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-/* line 298, ../scss/main.scss */
+/* line 234, ../scss/main.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -872,7 +733,7 @@ ul.pages {
   /* 2 */
 }
 
-/* line 303, ../scss/main.scss */
+/* line 239, ../scss/main.scss */
 .clearfix:after {
   clear: both;
 }
@@ -881,7 +742,7 @@ ul.pages {
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-/* line 312, ../scss/main.scss */
+/* line 248, ../scss/main.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -902,7 +763,7 @@ ul.pages {
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
 @media print {
-  /* line 339, ../scss/main.scss */
+  /* line 275, ../scss/main.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -911,18 +772,18 @@ ul.pages {
     text-shadow: none !important;
   }
 
-  /* line 347, ../scss/main.scss */
+  /* line 283, ../scss/main.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 351, ../scss/main.scss */
+  /* line 287, ../scss/main.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 355, ../scss/main.scss */
+  /* line 291, ../scss/main.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
@@ -930,33 +791,33 @@ ul.pages {
   /*
    * Don't show links for images, or javascript/internal links
    */
-  /* line 365, ../scss/main.scss */
+  /* line 301, ../scss/main.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 370, ../scss/main.scss */
+  /* line 306, ../scss/main.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 375, ../scss/main.scss */
+  /* line 311, ../scss/main.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */
   }
 
-  /* line 380, ../scss/main.scss */
+  /* line 316, ../scss/main.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 384, ../scss/main.scss */
+  /* line 320, ../scss/main.scss */
   img {
     max-width: 100% !important;
   }
@@ -965,7 +826,7 @@ ul.pages {
     margin: 0.5cm;
 }
 
-  /* line 394, ../scss/main.scss */
+  /* line 330, ../scss/main.scss */
   p,
   h2,
   h3 {
@@ -973,7 +834,7 @@ ul.pages {
     widows: 3;
   }
 
-  /* line 400, ../scss/main.scss */
+  /* line 336, ../scss/main.scss */
   h2,
   h3 {
     page-break-after: avoid;

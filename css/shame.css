@@ -1,0 +1,143 @@
+/* Site Colors:
+  #1A446C - blue grey
+  #689DC1 - light blue
+  #D4E6F4 - very light blue
+  #EEE4B9 - light tan
+  #8D0D19 - burgundy
+*/
+/* line 11, ../scss/shame.scss */
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 12, ../scss/shame.scss */
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 15px;
+  background: #EEE4B9;
+}
+
+/* line 19, ../scss/shame.scss */
+img {
+  border: none;
+}
+
+/* line 20, ../scss/shame.scss */
+a {
+  color: #8D0D19;
+}
+
+/* line 21, ../scss/shame.scss */
+a:hover {
+  color: #1A446C;
+}
+
+/* line 23, ../scss/shame.scss */
+#header {
+  height: 70px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background: #1A446C;
+  color: #D4E6F4;
+}
+
+/* line 28, ../scss/shame.scss */
+#header h1 {
+  padding: 1em;
+  margin: 0;
+}
+
+/* line 29, ../scss/shame.scss */
+#main {
+  height: 600px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #EEE4B9;
+}
+
+/* line 34, ../scss/shame.scss */
+#footer {
+  clear: both;
+  height: 2em;
+  margin: 0;
+  padding: 1em;
+  text-align: center;
+  background: #1A446C;
+  color: #D4E6F4;
+}
+
+/* line 42, ../scss/shame.scss */
+#navigation {
+  float: left;
+  width: 150px;
+  height: 100%;
+  margin: 0;
+  padding: 0 2em;
+  color: #D4E6F4;
+  background: #8D0D19;
+}
+
+/* line 48, ../scss/shame.scss */
+#navigation a {
+  color: #D4E6F4;
+  text-decoration: none;
+}
+
+/* line 49, ../scss/shame.scss */
+#navigation a:hover {
+  color: #FFFFFF;
+}
+
+/* line 50, ../scss/shame.scss */
+ul.subjects {
+  margin: 1em 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* line 53, ../scss/shame.scss */
+ul.pages {
+  padding-left: 2em;
+  list-style: square;
+}
+
+/* line 54, ../scss/shame.scss */
+.selected {
+  font-weight: bold;
+}
+
+/* line 57, ../scss/shame.scss */
+#page {
+  float: left;
+  height: 100%;
+  padding-left: 2em;
+  vertical-align: top;
+  background: #EEE4B9;
+}
+
+/* line 62, ../scss/shame.scss */
+#page h2 {
+  color: #8D0D19;
+  margin-top: 1em;
+}
+
+/* line 63, ../scss/shame.scss */
+#page h3 {
+  color: #8D0D19;
+}
+
+/* line 71, ../scss/shame.scss */
+header {
+  background-color: #ffb;
+  height: 20px;
+  width: 100%;
+}
