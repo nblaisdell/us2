@@ -1,6 +1,11 @@
+<?php 
+    if (!isset($layout_context)) {
+        $layout_context = "public";
+    }
+?>
 <!DOCTYPE html><head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title><?php echo $pagetitle; ?></title>
+<title>US2 - <?php echo $pagetitle; ?><?php if ($layout_context == "admin") { echo " Admin"; } ?></title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width">
 
@@ -14,9 +19,10 @@
 </head><body>
 
 <header>
-    <a href="./index.php">index</a>
+    <h1><a href="./index.php">US2inc<?php if ($layout_context == "admin") { echo " Admin"; } ?></a></h1>
+    <!-- <a href="./index.php">index</a>
     <a href="./testing.php">testing</a>
-    <a href="./staff.php">staff</a>
+    <a href="./staff.php">staff</a> -->
 </header>
 
 <!--[if lte IE 7]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]-->

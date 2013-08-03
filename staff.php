@@ -1,4 +1,5 @@
 <?php $pagetitle = "admin"; ?>
+<?php $layout_context = "admin"; ?>
 <?php require_once("incl/db_connection.php"); ?>
 <?php require_once("incl/functions.php"); ?>
 <?php require_once("incl/header.php"); ?>

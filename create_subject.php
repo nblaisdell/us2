@@ -1,18 +1,27 @@
+<?php require_once("incl/session.php"); ?>
+<?php require_once("incl/db_connection.php"); ?>
+<?php require_once("incl/functions.php"); ?>
+<?php require_once("incl/validation_functions.php"); ?>
+
 <?php
-
-session_start();
-
-function redirect_to($new_location) {
-      header("Location: " . $new_location);
-      exit;
-    } // copied here from functions to avoid output buffering glitch
-
 if (isset($_POST['submit'])) {
     // Process the form
     
     $menu_name = mysql_prep($_POST["menu_name"]);
     $position = (int) $_POST["position"];
     $visible = (int) $_POST["visible"];
+    
+    // validations
+    $required_fields = array("menu_name", "position", "visible");
+    validate_presences($required_fields);
+    
+    $fields_with_max_lengths = array("menu_name" => 30);
+    validate_max_lengths($fields_with_max_lengths);
+    
+    if (!empty($errors)) {
+        $_SESSION["errors"] = $errors;
+        redirect_to("new_subject.php");
+    }
     
     $query  = "INSERT INTO subjects (";
     $query .= "  menu_name, position, visible";
@@ -23,11 +32,11 @@ if (isset($_POST['submit'])) {
 
     if ($result) {
         // Success
-        $_SESSION['$message'] = "Subject created.";
+        $_SESSION["message"] = "Subject created.";
         redirect_to("manage_content.php");
     } else {
         // Failure
-        $_SESSION['$message'] = "Subject creation failed.";
+        $_SESSION["message"] = "Subject creation failed.";
         redirect_to("new_subject.php");
     }
     
@@ -36,4 +45,8 @@ if (isset($_POST['submit'])) {
     redirect_to("new_subject.php");
 }
 
+?>
+
+<?php
+    if (isset($connection)) { mysqli_close($connection); }
 ?>

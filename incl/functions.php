@@ -3,7 +3,7 @@
     function redirect_to($new_location) {
       header("Location: " . $new_location);
       exit;
-    } // see create_subject.php
+    }
 
     function mysql_prep($string) {
         global $connection;
