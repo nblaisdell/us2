@@ -1,0 +1,386 @@
+@import "compass"
+@import "compass/reset"
+
+// Serif
+@import url("http://fonts.googleapis.com/css?family=Droid+Serif")
+@import url("http://fonts.googleapis.com/css?family=PT+Serif")
+@import url("http://fonts.googleapis.com/css?family=Cutive")
+@import url("http://fonts.googleapis.com/css?family=Arvo")
+
+// Sans Serif
+@import url("http://fonts.googleapis.com/css?family=Open+Sans")
+@import url("http://fonts.googleapis.com/css?family=Droid+Sans")
+@import url("http://fonts.googleapis.com/css?family=PT+Sans")
+@import url("http://fonts.googleapis.com/css?family=Asap")
+@import url("http://fonts.googleapis.com/css?family=Lato")
+@import url("http://fonts.googleapis.com/css?family=Cabin")
+@import url("http://fonts.googleapis.com/css?family=Amaranth")
+
+$lightBlue: #5cbbe2
+$darkBlue:  #1778be
+$backgroundColor: #e8ecf2
+
+$shadow: hsla(0, 0, 0, .5)
+$pad: 1.5%
+
+
+$logoheight: 82px // Change this to adjust entire header. Was set to 70px for original.
+
+$pad: 1.5%
+$topNavShadow: 0 12px 6px -10px hsla(0,0,0,.4) inset
+$columns: 4
+
+$mobilePad: 2% // This is broken.
+
+// ======================================================================
+//      BASE
+// ======================================================================
+
+body
+    background-color: $backgroundColor
+    font-family: helvetica
+    font-family: "Droid Sans" // change?
+
+%header
+    font-weight: bold
+    line-height: 1em
+    margin: $pad 0
+    font-family: "PT Sans"
+    text-transform: uppercase
+
+h1
+    @extend %header
+    font-size: 1.8em
+    background-color: $lightBlue
+    color: white
+    margin-top: -15px
+    padding-top: 15px
+    margin-right: -15px
+    padding-right: 15px
+    padding-bottom: 15px
+    margin-left: -15px
+    padding-left: 15px
+    text-shadow: 0 1px 1px hsla(0,0,0,.5)
+
+h2
+    @extend %header
+    font-size: 1.5em
+    color: $darkBlue
+
+h3
+    @extend %header
+    font-size: 1.1em
+    color: $lightBlue
+    margin-bottom: $pad/4
+
+p
+    padding: 0 $pad
+    color: #222
+
+hr
+    border: none
+    background-color: $lightBlue
+    height: 3px
+    margin: $pad 0
+
+
+
+
+
+
+
+::selection
+    background-color: $darkBlue
+    color: white
+    text-shadow: none
+::-moz-selection
+    background-color: $darkBlue
+    color: white
+    text-shadow: none
+
+
+
+// ======================================================================
+//      LAYOUT
+// ======================================================================
+
+//      HEADER
+// ----------------------------------------------------------------------
+
+// The header block
+header
+    background-color: white
+    padding: $pad 0
+
+// US2 main logo
+.top-logo
+    float: left
+    height: $logoheight
+    width: auto
+    margin: 20px
+
+
+// $logoPad: $logoheight/4
+// // Utility Systems Solutions, Inc.
+// .top-title
+//     color: $darkBlue
+//     font-size: $logoheight/2.5
+//     padding: $logoPad/2 0 0 $logoWidth+$pad
+
+// // CVE Verified SDVOSB, SBA Certified 8(a), SDB, DOE Certified ESCO
+// .top-subtitle
+//     color: $lightBlue
+//     font-size: $logoheight/5
+//     padding: $logoPad/2 0 $logoPad/2 $logoWidth+$pad
+//     font-style: italic
+
+// Search bar in header
+.top-search
+    // margin-top: $logoPad/2 // CHANGE THIS IF THE PADDING VAULES FOR .top-title AND .top-subtitle CHANGE
+    position: absolute
+    right: 0
+    top: 0
+    width: 125px
+    height: 2em
+    padding-left: 3px
+    line-height: 2em
+    -webkit-appearance: textfield
+    box-shadow: 1px 1px 1px hsla(0,0,0,.2) inset
+    border: 1px solid hsla(0,0,0,.1)
+    border-radius: 1em
+    transition: all .4s
+    $gTop: #f1f1f1
+    $gBottom: #fff
+    background-color: $gTop
+    @include filter-gradient($gTop, $gBottom, vertical)
+    @include background-image(linear-gradient($gTop, $gBottom))
+    &:focus
+        width: 225px
+        outline: none
+
+// Nav bar in header
+.top-nav
+    background-color: $darkBlue
+    box-shadow: $topNavShadow, 0 1px hsla(0,0,100,.75)
+    li
+        position: relative
+        float: left
+        text-shadow: 0 1px 1px hsla(0,0,0,.5)
+        &:hover, &:focus
+            background-color: $lightBlue
+            box-shadow: $topNavShadow
+        ul
+            position: absolute
+            width: 225px
+            display: none
+            background-color: $lightBlue
+            z-index: 100
+            border-radius: 0 0 5px 5px
+            box-shadow: 0 2px 1px hsla(0,0,0,.3)
+            li
+                width: 100%
+                &:hover, &:focus
+                    box-shadow: none
+            a
+                width: 100%
+                &:hover, &:focus
+                    text-decoration: underline
+    a
+        color: white
+        text-decoration: none
+        padding: 12px 15px
+        display: inline-block
+    .active:after
+        // content: ""
+        // border: 5px solid transparent
+        // border-bottom: 5px solid $backgroundColor
+        // position: absolute
+        // bottom: 0
+        // left: 50%
+
+//      MAIN BODY
+// ----------------------------------------------------------------------
+
+.center
+    position: relative // needed for search position
+    max-width: 960px
+    margin: auto
+    padding: 0 $pad
+
+// .wrapper // no wrapper currently
+//     max-width: 960px
+//     margin: auto
+//     background-color: white
+//     box-shadow: 0 0 1px $shadow
+
+.container
+    margin: 20px 0
+    background-color: white
+    color: #222
+    padding: $pad
+    box-shadow: 0 1px 3px hsla(0,0,0,.5)
+    line-height: 1.3em
+    border-radius: 4px
+    overflow: hidden
+    position: relative // Needed so the dropdown doesn't go behind the content blocks.
+    z-index: 1 // Needed so the dropdown doesn't go behind the content blocks.
+    p
+        margin-bottom: $pad
+        &:last-of-type
+            margin-bottom: 0
+    & > ul
+        margin-left: $pad * 2
+        li
+            list-style: circle
+    & > img
+        float: right
+        padding: 6px
+        border: 1px solid hsla(0,0,0,.25)
+        box-shadow: 0 1px 5px hsla(0,0,0,.3)
+        margin: 0 0 $pad/2 $pad/2
+        border-radius: 3px
+    nav
+        // border-bottom: 3px solid $lightBlue // commented out for new h1
+        margin-top: -15px
+        margin-right: -15px
+        margin-bottom: 15px
+        margin-left: -15px
+        li
+            float: left
+            a
+                display: inline-block
+                padding: (15px/2) 15px
+                color: inherit
+                text-decoration: none
+                &:hover, &.active
+                    background-color: $lightBlue
+                    color: white
+                    text-shadow: 0 1px 1px hsla(0,0,0,.5)
+    @media (max-width: 660px)
+        padding: $mobilePad
+
+
+
+//      FOOTER
+// ----------------------------------------------------------------------
+
+.bottom-nav
+    padding: 0 $pad
+    font-size: .8em
+    margin-bottom: $pad
+    ul
+        width: 100% / $columns
+        float: left
+        @include box-sizing(border-box)
+        border-left: 3px solid $lightBlue
+        padding: 0 $pad
+    a
+        color: $lightBlue
+        display: inline-block
+        margin: .3em 0
+        &:hover, &:focus
+            color: $darkBlue
+    @media (max-width: 660px)
+        padding: 0 $mobilePad
+
+.copyright
+    text-align: center
+    font-size: .8em
+    opacity: .5
+    display: block
+    margin-bottom: $pad
+    text-shadow: 0 1px white
+
+// ======================================================================
+//      HELPER CLASSES
+// ======================================================================
+
+.cf // clearfix
+    zoom: 1
+    &:before, &:after
+        content: ""
+        display: table
+    &:after
+        clear: both
+
+// ======================================================================
+//      
+// ======================================================================
+
+
+
+
+
+
+
+
+
+// ======================================================================
+// 
+//      HOME PAGE
+// 
+// ======================================================================
+
+.img-box
+    box-shadow: 0 0 50px -10px black inset
+    background-image: url("../img/insulation.jpg")
+    background-size: 100% auto
+    height: 200px
+    padding: $pad
+    color: white
+    text-shadow: 0 1px 1px black
+    position: relative
+    // font-family: "Arvo"
+    .text-box
+        position: absolute
+        bottom: 1em
+    h1
+        font-size: 2.4em
+        background-color: inherit
+    p
+        margin-top: 1em
+        font-size: 1.2em
+        line-height: 1.4em
+        padding: 0 // override global
+        color: inherit // override global
+
+// Image cycle. (from v2)
+.img-wrap
+    width: 49.25%
+    float: left
+    position: relative
+    // overflow: hidden
+    line-height: 0
+    img
+        width: 100%
+    // Info boxes.
+    .img-details
+        background: rgba(0,0,0,.5)
+        color: white
+        text-shadow: 0 1px 1px black
+        padding: $pad
+        position: absolute
+        bottom: 0
+        width: 100%
+        @include box-sizing(border-box)
+    .img-title
+        font-size: .9em
+        line-height: 1.1em
+        font-weight: bold
+    .img-text
+        font-size: .75em
+        line-height: 1.2em
+        display: none
+    // right images.
+    &.img2, &.img4
+        margin-left: $pad // $mobilePad / 2 // Not sure about use of $mobilePad here
+        .img-details
+            // left: $pad
+    // bottom images.
+    &.img3, &.img4
+        margin-top: $pad // $mobilePad / 2 // Not sure about use of $mobilePad here
+
+
+
+
+@import "shame"
