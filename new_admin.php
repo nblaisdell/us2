@@ -50,9 +50,6 @@ if (isset($_POST['submit'])) {
 <?php $layout_context = "admin"; ?>
 <?php include("../includes/layouts/header.php"); ?>
 <div id="main">
-  <div id="navigation">
-    &nbsp;
-  </div>
   <div id="page">
     <?php echo message(); ?>
     <?php echo form_errors($errors); ?>
@@ -65,7 +62,7 @@ if (isset($_POST['submit'])) {
       <p>Password:
         <input type="password" name="password" value="" />
       </p>
-      <input type="submit" name="submit" value="Create Admin" />
+      <input type="submit" name="submit" class="btn" value="Create Admin" />
     </form>
     <br />
     <a href="manage_admins.php">Cancel</a>

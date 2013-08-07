@@ -67,9 +67,6 @@ if (isset($_POST['submit'])) {
 <?php include("../includes/layouts/header.php"); ?>
 
 <div id="main">
-  <div id="navigation">
-    <?php echo navigation($current_subject, $current_page); ?>
-  </div>
   <div id="page">
     <?php // $message is just a variable, doesn't use the SESSION
       if (!empty($message)) {
@@ -103,7 +100,7 @@ if (isset($_POST['submit'])) {
         &nbsp;
         <input type="radio" name="visible" value="1" <?php if ($current_subject["visible"] == 1) { echo "checked"; } ?>/> Yes
       </p>
-      <input type="submit" name="submit" value="Edit Subject" />
+      <input type="submit" name="submit" class="btn" value="Submit Edits" />
     </form>
     <br />
     <a href="manage_content.php">Cancel</a>

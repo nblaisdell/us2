@@ -10,14 +10,15 @@
 <?php find_selected_page(); ?>
 
 <div id="main">
-  <div id="navigation">
-    <br />
-    <a href="admin.php">&laquo; Main menu</a><br />
-    
-    <?php echo navigation($current_subject, $current_page); ?>
-    <br />
+    <a href="admin.php">&laquo; Main menu</a><br /><br /><br />
+    manage content: add a thing about selecting something from the menu, 
+    I also wonder about deleting the #main div or #page as they might be redundant
+    <br /><br /><br />
+    after more thought: what i need to do is revise the sidebar admin thing to be what it was, 
+    but then use it as part of the main div / page div combo and change the public area to only
+    have one
+    <br /><br /><br />
     <a href="new_subject.php">+ Add a subject</a>
-  </div>
   <div id="page">
     <?php echo message(); ?>
     <?php if ($current_subject) { ?>
@@ -49,12 +50,12 @@
 
     <?php } elseif ($current_page) { ?>
       <h2>Manage Page</h2>
-      Menu name: <?php echo htmlentities($current_page["menu_name"]); ?><br />
+      Name: <?php echo htmlentities($current_page["menu_name"]); ?><br />
       Position: <?php echo $current_page["position"]; ?><br />
       Visible: <?php echo $current_page["visible"] == 1 ? 'yes' : 'no'; ?><br />
       Content:<br />
       <div class="view-content">
-        <?php echo htmlentities($current_page["content"]); ?>
+        <?php echo nl2br(htmlentities($current_page["content"])); ?>
       </div>
       <br />
       <br />

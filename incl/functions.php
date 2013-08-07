@@ -187,7 +187,7 @@
     // navigation takes 2 arguments
     // - the current subject array or null
     // - the current page array or null
-    function navigation($subject_array, $page_array) {
+    function navigation($subject_array, $page_array) { // all open
         $output = "<ul class=\"subjects\">";
         $subject_set = find_all_subjects(false);
         while($subject = mysqli_fetch_assoc($subject_set)) {
@@ -224,7 +224,7 @@
         return $output;
     }
 
-    function public_navigation($subject_array, $page_array) {
+    function public_navigation($subject_array, $page_array) { // closed
         $output = "<ul class=\"subjects\">";
         $subject_set = find_all_subjects();
         while($subject = mysqli_fetch_assoc($subject_set)) {
@@ -239,25 +239,46 @@
             $output .= htmlentities($subject["menu_name"]);
             $output .= "</a>";
             
-            if ($subject_array["id"] == $subject["id"] || 
-                    $page_array["subject_id"] == $subject["id"]) {
-                $page_set = find_pages_for_subject($subject["id"]);
-                $output .= "<ul class=\"pages\">";
-                while($page = mysqli_fetch_assoc($page_set)) {
-                    $output .= "<li";
-                    if ($page_array && $page["id"] == $page_array["id"]) {
-                        $output .= " class=\"selected\"";
-                    }
-                    $output .= ">";
-                    $output .= "<a href=\"index.php?page=";
-                    $output .= urlencode($page["id"]);
-                    $output .= "\">";
-                    $output .= htmlentities($page["menu_name"]);
-                    $output .= "</a></li>";
-                }
-                $output .= "</ul>";
-                mysqli_free_result($page_set);
-            }
+            // old code for vertical navigation menu for on click
+            // if ($subject_array["id"] == $subject["id"] || // this is prob it
+            //         $page_array["subject_id"] == $subject["id"]) {
+            //     $page_set = find_pages_for_subject($subject["id"]);
+            //     $output .= "<ul class=\"pages\">";
+            //     while($page = mysqli_fetch_assoc($page_set)) {
+            //         $output .= "<li";
+            //         if ($page_array && $page["id"] == $page_array["id"]) {
+            //             $output .= " class=\"selected\"";
+            //         }
+            //         $output .= ">";
+            //         $output .= "<a href=\"index.php?page=";
+            //         $output .= urlencode($page["id"]);
+            //         $output .= "\">";
+            //         $output .= htmlentities($page["menu_name"]);
+            //         $output .= "</a></li>";
+            //     }
+            //     $output .= "</ul>";
+            //     mysqli_free_result($page_set);
+            // }
+
+// new code for horizontal navigation menu that works with hover states.
+                        $page_set = find_pages_for_subject($subject["id"], false);
+                        $output .= "<ul class=\"pages\">";
+                        while($page = mysqli_fetch_assoc($page_set)) {
+                            $output .= "<li";
+                            if ($page_array && $page["id"] == $page_array["id"]) {
+                                $output .= " class=\"selected\"";
+                            }
+                            $output .= ">";
+                            $output .= "<a href=\"index.php?page=";
+                            $output .= urlencode($page["id"]);
+                            $output .= "\">";
+                            $output .= htmlentities($page["menu_name"]);
+                            $output .= "</a></li>";
+                        }
+                        mysqli_free_result($page_set);
+                        $output .= "</ul></li>";
+//
+
 
             $output .= "</li>"; // end of the subject li
         }

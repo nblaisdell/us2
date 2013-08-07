@@ -72,9 +72,6 @@ if (isset($_POST['submit'])) {
 <?php include("../includes/layouts/header.php"); ?>
 
 <div id="main">
-  <div id="navigation">
-    <?php echo navigation($current_subject, $current_page); ?>
-  </div>
   <div id="page">
     <?php echo message(); ?>
     <?php echo form_errors($errors); ?>
@@ -107,7 +104,7 @@ if (isset($_POST['submit'])) {
       <p>Content:<br />
         <textarea name="content" rows="20" cols="80"><?php echo htmlentities($current_page["content"]); ?></textarea>
       </p>
-      <input type="submit" name="submit" value="Edit Page" />
+      <input type="submit" name="submit" class="btn" value="Submit Edits" />
     </form>
     <br />
     <a href="manage_content.php?page=<?php echo urlencode($current_page["id"]); ?>">Cancel</a>

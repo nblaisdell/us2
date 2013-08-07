@@ -13,10 +13,6 @@
 <?php $layout_context = "admin"; ?>
 <?php include("../includes/layouts/header.php"); ?>
 <div id="main">
-  <div id="navigation">
-        <br />
-        <a href="admin.php">&laquo; Main menu</a><br />
-  </div>
   <div id="page">
     <?php echo message(); ?>
     <h2>Manage Admins</h2>

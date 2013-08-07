@@ -67,9 +67,6 @@ if (isset($_POST['submit'])) {
 
 <?php include("../includes/layouts/header.php"); ?>
 <div id="main">
-  <div id="navigation">
-    <?php echo navigation($current_subject, $current_page); ?>
-  </div>
   <div id="page">
     <?php echo message(); ?>
     <?php echo form_errors($errors); ?>
@@ -98,7 +95,7 @@ if (isset($_POST['submit'])) {
       <p>Content:<br />
         <textarea name="content" rows="20" cols="80"></textarea>
       </p>
-      <input type="submit" name="submit" value="Create Page" />
+      <input type="submit" name="submit" class="btn" value="Create Page" />
     </form>
     <br />
     <a href="manage_content.php?subject=<?php echo urlencode($current_subject["id"]); ?>">Cancel</a>

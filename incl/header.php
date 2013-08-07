@@ -36,12 +36,17 @@
  -->
     </header>
 
-
-
+    <nav class="top-nav cf">
+        <div id="navigation" class="center">
+                <?php echo public_navigation($current_subject, $current_page); ?>
+        </div>
+    </nav>
+<!-- 
+<br/><br/><br/>
 <nav class="top-nav cf">
     <div class="center">
         <ul>
-            <li><a class="active" href="#">Home</a>
+            <li><a class="active" href="index.php">Home</a>
                 <ul>
                     <li><a href="#">Company Profile</a></li>
                     <li><a href="#">About Us</a></li>
@@ -77,7 +82,7 @@
             <li><a href="#">Purchase</a>
                 <ul>
                     <li><a href="#">Resources</a></li>
-                    <li><a href="#">GSA Schedule Projects & Services</a>
+                    <li><a href="#">GSA Schedule Projects &amp; Services</a>
                         <ul>
                             <li><a href="#">Schedule 51V - Hardware Superstore</a></li>
                             <li><a href="#">Schedule 56 - Buildings and Building Materials/Industrial Services and Supplies</a></li>
@@ -98,6 +103,6 @@
             <li><a href="#">Contact Us</a></li>
         </ul>
     </div>
-</nav>
+</nav> -->
 <div class="center">
 <div class="container">

@@ -9,22 +9,19 @@
 <?php find_selected_page(true); ?>
 
 <div id="main">
-  <div id="navigation">
-        <?php echo public_navigation($current_subject, $current_page); ?>
-  </div>
   <div id="page">
         <?php if ($current_page) { ?>
             
             <h2><?php echo htmlentities($current_page["menu_name"]); ?></h2>
             <?php echo nl2br(htmlentities($current_page["content"])); ?>
 
-            <a href="login.php">login</a>
-            <br/><br/><hr/>
+            <!-- <a href="login.php">login</a>|<a href="admin.php">admin</a>
+            <br/><br/><hr/>  -->
             
         <?php } else { ?>
             
-            <a href="login.php">login</a>
-            <br/><br/><hr/>
+            <!-- <a href="login.php">login</a>|<a href="admin.php">admin</a>
+            <br/><br/><hr/>  -->
 
             <nav>
                 <ul class="cf">

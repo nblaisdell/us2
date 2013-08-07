@@ -6,11 +6,11 @@
             <li><a href="#">Company Profile</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Vision</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="http://us2incblog.com/">Blog</a></li>
         </ul>
         <ul>
             <li><a href="#">Energy Audits</a></li>
-            <li><a href="#">Electrical & Lighting</a></li>
+            <li><a href="#">Electrical &amp; Lighting</a></li>
             <li><a href="#">General Construction</a></li>
             <li><a href="#">Insulation Solutions</a></li>
             <li><a href="#">Steam Monitoring</a></li>
@@ -25,7 +25,7 @@
         <ul>
             <li><a href="#">Partner Pre-qualifications</a></li>
             <li><a href="#">Resources</a></li>
-            <li><a href="#">GSA Schedule Products & Services</a></li>
+            <li><a href="#">GSA Schedule Products &amp; Services</a></li>
         </ul>
     </nav>
 </footer>
