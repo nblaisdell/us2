@@ -66,14 +66,23 @@ if (isset($_POST['submit'])) {
 
 <?php include("../includes/layouts/header.php"); ?>
 
+<nav class="top-nav cf">
+    <div id="navigation" class="center">
+            <?php echo navigation($current_subject, $current_page); ?>
+            <a href="new_subject.php">+ Add a subject</a>
+    </div>
+</nav>
+
 <div id="main">
-  <div id="page">
+
     <?php // $message is just a variable, doesn't use the SESSION
       if (!empty($message)) {
         echo "<div class=\"message\">" . htmlentities($message) . "</div>";
       }
     ?>
     <?php echo form_errors($errors); ?>
+
+    <a href="admin.php">&laquo; Main Admin Menu</a>
     
     <h2>Edit Subject: <?php echo htmlentities($current_subject["menu_name"]); ?></h2>
     <form action="edit_subject.php?subject=<?php echo urlencode($current_subject["id"]); ?>" method="post">
@@ -108,7 +117,7 @@ if (isset($_POST['submit'])) {
     &nbsp;
     <a href="delete_subject.php?subject=<?php echo urlencode($current_subject["id"]); ?>" onclick="return confirm('Are you sure?');">Delete subject</a>
     
-  </div>
+
 </div>
 
 <?php include("incl/layouts/footer.php"); ?>

@@ -45,7 +45,7 @@ if (isset($_POST['submit'])) {
 <?php $layout_context = "admin"; ?>
 <?php include("../includes/layouts/header.php"); ?>
 <div id="main">
-  <div id="page">
+
     <?php echo message(); ?>
     <?php echo form_errors($errors); ?>
     
@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
       </p>
       <input type="submit" name="submit" value="Submit" />
     </form>
-  </div>
+
 </div>
 
 <?php include("incl/layouts/footer.php"); ?>

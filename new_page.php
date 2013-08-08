@@ -66,10 +66,20 @@ if (isset($_POST['submit'])) {
 ?>
 
 <?php include("../includes/layouts/header.php"); ?>
+
+<nav class="top-nav cf">
+    <div id="navigation" class="center">
+            <?php echo navigation($current_subject, $current_page); ?>
+            <a href="new_subject.php">+ Add a subject</a>
+    </div>
+</nav>
+
 <div id="main">
-  <div id="page">
+
     <?php echo message(); ?>
     <?php echo form_errors($errors); ?>
+
+    <a href="admin.php">&laquo; Main Admin Menu</a>
     
     <h2>Create Page</h2>
     <form action="new_page.php?subject=<?php echo urlencode($current_subject["id"]); ?>" method="post">
@@ -99,7 +109,7 @@ if (isset($_POST['submit'])) {
     </form>
     <br />
     <a href="manage_content.php?subject=<?php echo urlencode($current_subject["id"]); ?>">Cancel</a>
-  </div>
+
 </div>
 
 <?php include("incl/footer.php"); ?>

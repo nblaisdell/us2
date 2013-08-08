@@ -9,18 +9,18 @@
 <?php include("incl/sidebar.php"); ?>
 <?php find_selected_page(); ?>
 
+<nav class="top-nav cf">
+    <div id="navigation" class="center">
+            <?php echo navigation($current_subject, $current_page); ?>
+            <a href="new_subject.php">+ Add a subject</a>
+    </div>
+</nav>
+
 <div id="main">
-    <a href="admin.php">&laquo; Main menu</a><br /><br /><br />
-    manage content: add a thing about selecting something from the menu, 
-    I also wonder about deleting the #main div or #page as they might be redundant
-    <br /><br /><br />
-    after more thought: what i need to do is revise the sidebar admin thing to be what it was, 
-    but then use it as part of the main div / page div combo and change the public area to only
-    have one
-    <br /><br /><br />
-    <a href="new_subject.php">+ Add a subject</a>
-  <div id="page">
     <?php echo message(); ?>
+
+    <a href="admin.php">&laquo; Main Admin Menu</a><br /><br /><br />
+
     <?php if ($current_subject) { ?>
       <h2>Manage Subject</h2>
       Menu name: <?php echo htmlentities($current_subject["menu_name"]); ?><br />
@@ -62,9 +62,9 @@
       <a href="edit_page.php?page=<?php echo urlencode($current_page['id']); ?>">Edit page</a>
       
     <?php } else { ?>
-      Please select a subject or a page.
+      Please select a subject or a page from the navigation bar above.
     <?php }?>
-  </div>
+
 </div>
 
 <?php include("incl/footer.php"); ?>

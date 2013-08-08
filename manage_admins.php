@@ -12,9 +12,20 @@
 
 <?php $layout_context = "admin"; ?>
 <?php include("../includes/layouts/header.php"); ?>
+
+<nav class="top-nav cf">
+    <div id="navigation" class="center">
+            <?php echo navigation($current_subject, $current_page); ?>
+            <a href="new_subject.php">+ Add a subject</a>
+    </div>
+</nav>
+
 <div id="main">
-  <div id="page">
+
     <?php echo message(); ?>
+
+    <a href="admin.php">&laquo; Main Admin Menu</a>
+
     <h2>Manage Admins</h2>
     <table>
       <tr>
@@ -31,6 +42,6 @@
     </table>
     <br />
     <a href="new_admin.php">Add new admin</a>
-  </div>
+
 </div>
 <?php include("incl/footer.php"); ?>

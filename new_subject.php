@@ -10,13 +10,21 @@
 
 <?php find_selected_page(); ?>
 
+<nav class="top-nav cf">
+    <div id="navigation" class="center">
+            <?php echo navigation($current_subject, $current_page); ?>
+            <a href="new_subject.php">+ Add a subject</a>
+    </div>
+</nav>
 
 <div id="main">
-  <div id="page">
+
     <?php echo message(); ?>
     <?php $errors = errors(); ?>
     <?php echo form_errors($errors); ?>
     
+    <a href="admin.php">&laquo; Main Admin Menu</a>
+
     <h2>Create Subject</h2>
     <form action="create_subject.php" method="post">
       <p>Menu name:
@@ -42,7 +50,7 @@
     </form>
     <br />
     <a href="manage_content.php">Cancel</a>
-  </div>
+
 </div>
 
 <?php include("incl/footer.php"); ?>

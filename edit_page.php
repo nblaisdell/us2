@@ -71,10 +71,18 @@ if (isset($_POST['submit'])) {
 
 <?php include("../includes/layouts/header.php"); ?>
 
+<nav class="top-nav cf">
+    <div id="navigation" class="center">
+            <?php echo navigation($current_subject, $current_page); ?>
+            <a href="new_subject.php">+ Add a subject</a>
+    </div>
+</nav>
+
 <div id="main">
-  <div id="page">
     <?php echo message(); ?>
     <?php echo form_errors($errors); ?>
+
+    <a href="admin.php">&laquo; Main Admin Menu</a>
     
     <h2>Edit Page: <?php echo htmlentities($current_page["menu_name"]); ?></h2>
     <form action="edit_page.php?page=<?php echo urlencode($current_page["id"]); ?>" method="post">
@@ -112,7 +120,7 @@ if (isset($_POST['submit'])) {
     &nbsp;
     <a href="delete_page.php?page=<?php echo urlencode($current_page["id"]); ?>" onclick="return confirm('Are you sure?');">Delete page</a>
     
-  </div>
+
 </div>
 
 <?php include("incl/footer.php"); ?>

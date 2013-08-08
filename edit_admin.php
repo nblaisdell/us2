@@ -63,10 +63,19 @@ if (isset($_POST['submit'])) {
 <?php $layout_context = "admin"; ?>
 <?php include("../includes/layouts/header.php"); ?>
 
+<nav class="top-nav cf">
+    <div id="navigation" class="center">
+            <?php echo navigation($current_subject, $current_page); ?>
+            <a href="new_subject.php">+ Add a subject</a>
+    </div>
+</nav>
+
 <div id="main">
-  <div id="page">
+
     <?php echo message(); ?>
     <?php echo form_errors($errors); ?>
+
+    <a href="admin.php">&laquo; Main Admin Menu</a>
     
     <h2>Edit Admin: <?php echo htmlentities($admin["username"]); ?></h2>
     <form action="edit_admin.php?id=<?php echo urlencode($admin["id"]); ?>" method="post">
@@ -80,7 +89,7 @@ if (isset($_POST['submit'])) {
     </form>
     <br />
     <a href="manage_admins.php">Cancel</a>
-  </div>
+
 </div>
 
 <?php include("incl/footer.php"); ?>
