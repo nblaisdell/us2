@@ -9,19 +9,68 @@
 <?php find_selected_page(true); ?>
 
 <div id="main">
-  <div id="page">
-        <?php if ($current_page) { ?>
+    <div id="page">
+
+
+        <div class="banner">
+            <ul>
+                <li>
+                    <img src="http://placehold.it/960x350" alt="">
+                    <a href="#">Steam Monitoring</a>
+                </li>
+                <li>
+                    <img src="http://placehold.it/960x350" alt="">
+                    <a href="#">Electrical / Lighting</a>
+                </li>
+                <li>
+                    <img src="http://placehold.it/960x350" alt="">
+                    <a href="#">General Construction</a>
+                </li>
+                <li>
+                    <img src="http://placehold.it/960x350" alt="">
+                    <a href="#">Energy Management</a>
+                </li>
+                <li>
+                    <img src="http://placehold.it/960x350" alt="">
+                    <a href="#">Insulation Solutions</a>
+                </li>
+            </ul>
+        </div>
+        
+
+
+
+
+        <h1>Welcome to US2!</h1>
+        <p>US2 designs, develops, and implements energy efficient retrofit strategies for aging Government facilities that pay their way today and help create a green, and cost-efficient tomorrow. We understand how to achieve energy conservation goals swiftly and effectively in the Federal energy environment. We are on the GSA Schedule and are SBA certified 8(a) and SDB, and VA verified SDVOSB and VOSB. Applying our Management3 Methodology (TM pending) to assignments, US2 delivers results that are cost-effective turnkey solutions based on a collaborative approach to issue resolution.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--<?php if ($current_page) { ?>
             
             <h2><?php echo htmlentities($current_page["menu_name"]); ?></h2>
             <?php echo nl2br(htmlentities($current_page["content"])); ?>
 
             <!-- <a href="login.php">login</a>|<a href="admin.php">admin</a>
-            <br/><br/><hr/>  -->
+            <br/><br/><hr/>  ->
             
         <?php } else { ?>
             
             <!-- <a href="login.php">login</a>|<a href="admin.php">admin</a>
-            <br/><br/><hr/>  -->
+            <br/><br/><hr/>  ->
 
             <nav>
                 <ul class="cf">
@@ -42,7 +91,7 @@
             <p>Our primary area of expertise is the installation of steam trap wireless monitoring systems using a Web-based information collection network. These intelligent systems enable clients to save on energy production costs and maintenance labor. To accomplish this, US2 offers turnkey projects from energy surveys to retrofit installation of energy-saving equipment, with provision for the ongoing measuring of energy utilization. New technologies, including acoustic steam trap sensors and wireless web-enabled receivers make it possible to retrofit older systems cost-effectively and achieve significant performance improvement and measurable energy savings.</p>
             <h3>Who We Serve</h3>
             <p>US2 primarily serves Federal agencies mandated to achieve energy savings, particularly VA hospitals and defense installations. We also support other Federal facilities, and some private sector facilities that desire to Eco-fit their systems to make them ecological and economical for the future.</p>
-            <!-- <button class="download-btn">Download</button> -->
+            <!-- <button class="download-btn">Download</button> ->
             <hr>
             <h2>COMPANY SYNOPSIS</h2>
             <ul>
@@ -59,8 +108,8 @@
                 <li>GSA Contract GS-07F-0508Y Owner (Financing for Facility Management & Energy Solutions)</li>
             </ul>
             
-        <?php }?>
-  </div>
+        <?php }?>-->
+    </div>
 </div>
 
 <?php include("incl/footer.php"); ?>
