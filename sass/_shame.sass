@@ -106,10 +106,29 @@ textarea
 // unslider code
 
 .banner
-    height: 374px
     position: relative // needed for unslider to work
     overflow: auto // needed for unslider to work
     li
         list-style: none // needed for unslider to work
-    ul li
         float: left // needed for unslider to work
+    a
+        text-decoration: none
+        color: white
+    .img-info
+        text-shadow: 0 1px 1px hsla(0, 0, 0, .5)
+        position: absolute
+        bottom: 5px
+        background-color: hsla(0, 0, 0, .3)
+        width: 902px
+        height: 90px
+        padding: 15px
+    .img-title
+        font-size: 1.3em
+        padding-bottom: 10px
+        display: inline-block
+    p
+        color: white
+        font-size: 1em
+
+.banner-wrap
+    height: 380px

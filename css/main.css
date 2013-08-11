@@ -528,15 +528,42 @@ textarea {
 
 /* line 108, ../sass/_shame.sass */
 .banner {
-  height: 374px;
   position: relative;
   overflow: auto;
 }
-/* line 112, ../sass/_shame.sass */
+/* line 111, ../sass/_shame.sass */
 .banner li {
   list-style: none;
+  float: left;
 }
 /* line 114, ../sass/_shame.sass */
-.banner ul li {
-  float: left;
+.banner a {
+  text-decoration: none;
+  color: white;
+}
+/* line 117, ../sass/_shame.sass */
+.banner .img-info {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 902px;
+  height: 90px;
+  padding: 15px;
+}
+/* line 125, ../sass/_shame.sass */
+.banner .img-title {
+  font-size: 1.3em;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+/* line 129, ../sass/_shame.sass */
+.banner p {
+  color: white;
+  font-size: 1em;
+}
+
+/* line 133, ../sass/_shame.sass */
+.banner-wrap {
+  height: 380px;
 }

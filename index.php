@@ -11,32 +11,63 @@
 <div id="main">
     <div id="page">
 
+        <div class="banner-wrap">
+            <div class="banner">
+                <ul>
 
-        <div class="banner">
-            <ul>
-                <li>
-                    <img src="http://placehold.it/960x350" alt="">
-                    <a href="#">Steam Monitoring</a>
-                </li>
-                <li>
-                    <img src="http://placehold.it/960x350" alt="">
-                    <a href="#">Electrical / Lighting</a>
-                </li>
-                <li>
-                    <img src="http://placehold.it/960x350" alt="">
-                    <a href="#">General Construction</a>
-                </li>
-                <li>
-                    <img src="http://placehold.it/960x350" alt="">
-                    <a href="#">Energy Management</a>
-                </li>
-                <li>
-                    <img src="http://placehold.it/960x350" alt="">
-                    <a href="#">Insulation Solutions</a>
-                </li>
-            </ul>
+                    <li>
+                        <a href="#">
+                            <img src="http://placehold.it/960x350" alt="">
+                            <div class="img-info">
+                                <span class="img-title">Steam Monitoring</span>
+                                <p>US2 provides retrofit installation of energy conservation measures including steam trap monitoring systems, HVAC installations and renovations, cost efficient hot water systems, and steam/condensate metering.</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="http://placehold.it/960x350" alt="">
+                            <div class="img-info">
+                                <span class="img-title">Electrical / Lighting</span>
+                                <p>US2 provides turnkey services in energy efficient lighting systems upgrades, new and replacement electrical generator and cable installations, and initial electrical energy metering surveys.</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="http://placehold.it/960x350" alt="">
+                            <div class="img-info">
+                                <span class="img-title">General Construction</span>
+                                <p>US2 provides turnkey construction management for a wide range of general construction projects throughout the United States.</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="http://placehold.it/960x350" alt="">
+                            <div class="img-info">
+                                <span class="img-title">Energy Management</span>
+                                <p>With energy costs soaring and natural resources dwindling, it’s more imperative than ever to get a sense of whether or not your facility is working efficiently. At US2, one of our primary strengths is assisting agencies in auditing and monitoring their energy usage to ensure that all of your systems are working to both your advantage and the advantage of the planet.</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="http://placehold.it/960x350" alt="">
+                            <div class="img-info">
+                                <span class="img-title">Insulation Solutions</span>
+                                <p>US2 provides turnkey contracting services that implement state-of-the-art insulation solutions for steam and hot water distribution systems across the United States.</p>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
         </div>
-        
 
 
 
