@@ -61,7 +61,6 @@ if (isset($_POST['submit'])) {
 ?>
 
 <?php $layout_context = "admin"; ?>
-<?php include("../includes/layouts/header.php"); ?>
 
 <nav class="top-nav cf">
     <div id="navigation" class="center">

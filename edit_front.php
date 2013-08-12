@@ -10,17 +10,7 @@
 <?php include("incl/sidebar.php"); ?>
 
 
-<?php find_selected_page(); ?>
-
-<?php
-  // Unlike new_page.php, we don't need a subject_id to be sent
-  // We already have it stored in pages.subject_id.
-  if (!$current_page) {
-    // page ID was missing or invalid or 
-    // page couldn't be found in database
-    redirect_to("manage_content.php");
-  }
-?>
+<?php // find_selected_page(); // is this needed? ?>
 
 <?php
 if (isset($_POST['submit'])) {
@@ -33,7 +23,7 @@ if (isset($_POST['submit'])) {
   $content = mysql_prep($_POST["content"]);
 
   // validations
-  $required_fields = array("menu_name", "position", "visible", "content");
+  $required_fields = array("title", "content");
   validate_presences($required_fields);
   
   $fields_with_max_lengths = array("menu_name" => 30);
@@ -82,42 +72,41 @@ if (isset($_POST['submit'])) {
 
     <a href="admin.php">&laquo; Main Admin Menu</a>
     
-    <h2>Edit Page: <?php echo htmlentities($current_page["menu_name"]); ?></h2>
-    <form action="edit_page.php?page=<?php echo urlencode($current_page["id"]); ?>" method="post">
-      <p>Menu name:
-        <input type="text" name="menu_name" value="<?php echo htmlentities($current_page["menu_name"]); ?>" />
+    <h2>Edit Front Page:</h2>
+    <form action="edit_front.php" method="post">
+      <p>Title:
+        <input type="text" name="title" value="<?php echo htmlentities(['title']); ?>">
       </p>
-      <p>Position:
+<!--       <p>Position:
         <select name="position">
         <?php
-          $page_set = find_pages_for_subject($current_page["subject_id"]);
-          $page_count = mysqli_num_rows($page_set);
-          for($count=1; $count <= $page_count; $count++) {
-            echo "<option value=\"{$count}\"";
-            if ($current_page["position"] == $count) {
-              echo " selected";
-            }
-            echo ">{$count}</option>";
-          }
+          // $page_set = find_pages_for_subject($current_page["subject_id"]);
+          // $page_count = mysqli_num_rows($page_set);
+          // for($count=1; $count <= $page_count; $count++) {
+          //   echo "<option value=\"{$count}\"";
+          //   if ($current_page["position"] == $count) {
+          //     echo " selected";
+          //   }
+          //   echo ">{$count}</option>";
+          // }
         ?>
         </select>
-      </p>
-      <p>Visible:
-        <input type="radio" name="visible" value="0" <?php if ($current_page["visible"] == 0) { echo "checked"; } ?> /> No
+      </p> -->
+<!--       <p>Visible:
+        <input type="radio" name="visible" value="0" <?php // if ($current_page["visible"] == 0) { echo "checked"; } ?> /> No
         &nbsp;
-        <input type="radio" name="visible" value="1" <?php if ($current_page["visible"] == 1) { echo "checked"; } ?>/> Yes
-      </p>
+        <input type="radio" name="visible" value="1" <?php // if ($current_page["visible"] == 1) { echo "checked"; } ?>/> Yes
+      </p> -->
       <p>Content:<br />
-        <textarea name="content" rows="20" cols="80"><?php echo htmlentities($current_page["content"]); ?></textarea>
+        <textarea name="content"><?php echo htmlentities(["text"]); ?></textarea>
       </p>
       <input type="submit" name="submit" class="btn" value="Submit Edits" />
     </form>
-    <br />
-    <a href="manage_content.php?page=<?php echo urlencode($current_page["id"]); ?>">Cancel</a>
+<!--     <br />
+    <a href="manage_content.php?page=<?php // echo urlencode($current_page["id"]); ?>">Cancel</a>
     &nbsp;
     &nbsp;
-    <a href="delete_page.php?page=<?php echo urlencode($current_page["id"]); ?>" onclick="return confirm('Are you sure?');">Delete page</a>
-    
+    <a href="delete_page.php?page=<?php // echo urlencode($current_page["id"]); ?>" onclick="return confirm('Are you sure?');">Delete page</a> -->
 
 </div>
 

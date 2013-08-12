@@ -7,9 +7,7 @@
     <title>US2 - <?php echo $pagetitle; ?><?php if ($layout_context == "admin") { echo " Admin"; } ?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-
-<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
+    <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/shame.css">
@@ -18,14 +16,20 @@
 </head>
 
 <body>
-<!--[if lte IE 7]<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]-->
+
+<!--[if lte IE 7]
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. 
+    Please <a href="http://browsehappy.com/">upgrade your browser</a> 
+    or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> 
+    to improve your experience.</p>
+<![endif]-->
 
     <header>
         <div class="center cf">
             <a href="./index.php">
                 <img src="img/logo-full.jpg" alt="Utility Systems Solutions, Inc." class="top-logo">
             </a>
-            <input type="search" results="5" class="top-search">
+            <p class="call_to_action">Call us now at<br />(214) 722-7511</p>
         </div>
     </header>
 

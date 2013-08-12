@@ -7,59 +7,7 @@ $pad: 1.5%
 
 $logoheight: 82px // Change this to adjust entire header. Was set to 70px for original.
 
-$pad: 1.5%
 $topNavShadow: 0 12px 6px -10px hsla(0,0,0,.4) inset
-$columns: 4
-
-$mobilePad: 2% // This is broken.
-
-
-.top-nav
-    background-color: $darkBlue
-    box-shadow: $topNavShadow, 0 1px hsla(0,0,100,.75)
-
-#navigation ul
-    font-size: 16px
-    margin: 0
-    padding: 0
-    list-style: none
-    li 
-        display: block
-        position: relative
-        float: left
-        a
-            display: block
-            text-decoration: none
-            color: #ffffff
-            padding: 5px 15px 5px 15px
-            padding: 12px 15px
-            background: $darkBlue
-            // white-space: nowrap
-            text-shadow: 0 1px 1px hsla(0,0,0,.5)
-            // box-shadow: $topNavShadow, 0 1px hsla(0,0,100,.75)
-            &:hover 
-                background: $lightBlue
-        ul
-            display: none
-            // box-shadow: 0
-            width: 225px
-            border-radius: 0 0 5px 5px
-            box-shadow: 0 2px 1px hsla(0,0,0,.3)
-            z-index: 100
-            position: absolute
-        &:hover ul
-            display: block
-            position: absolute
-        &:hover li
-            float: none
-            //font-size: 11px
-            a:hover 
-                background: lighten($lightBlue,8%)
-                text-decoration: underline
-        &:hover a
-            background: $lightBlue
-.pages a
-    box-shadow: red, 0 0 hsla(0,0,100,0)
 
 
 // ======================================================================
@@ -68,31 +16,6 @@ $mobilePad: 2% // This is broken.
 // 
 // ======================================================================
 
-// #navigation
-//     float: left
-//     width: 120px
-//     height: 100% 
-//     margin: 0
-//     padding: 0.7em 2em
-//     //color: #D4E6F4
-//     //background: #8D0D19
-
-// #page
-//     float: left
-//     width: 700px
-//     height: 100%
-//     //padding-left: 2em
-//     //vertical-align: top 
-//     //background: #EEE4B9
-//     .btn
-//         margin: 10px
-//         padding: 6px
-
-// ul.pages li
-//     padding-left: 12px
-//     &:before
-//         content: "- "
-
 .view-content
     margin: 1em 0
     padding: 1em
@@ -100,3 +23,23 @@ $mobilePad: 2% // This is broken.
 
 textarea
     width: 100%
+    height: 150px
+
+.btn
+    padding: 6px
+
+// to test: <div class="message">This is a test with things<ul><li>first thing</li><li>second thing</li></ul></div>
+.message
+    border: 2px solid $darkBlue
+    color: $lightBlue
+    font-weight: bold
+    margin: 1em 0
+    padding: 1em
+
+.error
+    border: 2px solid red
+    color: red
+    margin: 1em 0
+    padding: 1em
+    ul
+        padding-left: 2em

@@ -64,8 +64,6 @@ if (isset($_POST['submit'])) {
 
 ?>
 
-<?php include("../includes/layouts/header.php"); ?>
-
 <nav class="top-nav cf">
     <div id="navigation" class="center">
             <?php echo navigation($current_subject, $current_page); ?>

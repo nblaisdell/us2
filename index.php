@@ -23,6 +23,7 @@
             <!-- <a href="login.php">login</a>|<a href="admin.php">admin</a>
             <br/><br/><hr/>  -->
 
+
             <nav>
                 <ul class="cf">
                     <li><a href="#" class="active">Steam Monitoring</a></li>
@@ -32,8 +33,13 @@
                 </ul>
             </nav>
             <h1>Steam Monitoring</h1>
+            <div class="img-box">
+                <div class="text-box">
+                    <h1>Insulation</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, rem, vel quaerat magni eum tempora quibusdam. Perspiciatis, voluptas, ullam, eligendi, repellendus exercitationem esse placeat quo cumque eveniet quos magnam perferendis.</p>
+                </div>
+            </div>
             <h2>Energy-Efficient Steam Monitoring Services</h2>
-            <img src="http://us2inc.com/img/steam.jpg" alt="">
             <h3>Steam Expertise</h3>
             <p>US2 provides retrofit installation of energy conservation measures including steam trap monitoring systems, HVAC installations and renovations, cost efficient hot water systems, and steam/condensate metering.</p>
             <h3>Customer Challenges</h3>
