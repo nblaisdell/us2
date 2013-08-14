@@ -52,7 +52,7 @@ if (isset($_POST['submit'])) {
     if ($result) {
       // Success
       $_SESSION["message"] = "Page created.";
-      redirect_to("manage_content.php?subject=" . urlencode($current_subject["id"]));
+      //redirect_to("manage_content.php?subject=" . urlencode($current_subject["id"]));
     } else {
       // Failure
       $_SESSION["message"] = "Page creation failed.";

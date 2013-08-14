@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
       redirect_to("manage_admins.php");
     } else {
       // Failure
-      $_SESSION["message"] = "Admin update failed.";
+      $_SESSION["message_errors"] = "Admin update failed.";
     }
   
   }

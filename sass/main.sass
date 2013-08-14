@@ -23,11 +23,10 @@ $backgroundColor: #e8ecf2
 
 // Justin's Other Stuff
 $shadow: hsla(0, 0, 0, .5)
-$pad: 1.5%
+$pad: 10px
 
 $logoheight: 82px // Change this to adjust entire header. Was set to 70px for original.
 
-$pad: 1.5%
 $topNavShadow: 0 12px 6px -10px hsla(0,0,0,.4) inset
 $columns: 4
 
@@ -42,14 +41,14 @@ body
     font-family: helvetica
     font-family: "Droid Sans" // change?
 
-%header // used below
+%header // used below for headers
     font-weight: bold
     line-height: 1em
     margin: $pad 0
     font-family: "PT Sans"
     text-transform: uppercase
 
-h1
+h1 // banner header
     @extend %header
     font-size: 1.8em
     background-color: $lightBlue
@@ -63,19 +62,19 @@ h1
     padding-left: 15px
     text-shadow: 0 1px 1px hsla(0,0,0,.5)
 
-h2
+h2 // dark blue header
     @extend %header
     font-size: 1.5em
     color: $darkBlue
 
-h3
+h3 // light blue subheader
     @extend %header
     font-size: 1.1em
     color: $lightBlue
     margin-bottom: $pad/4
 
 p
-    padding: $pad 0
+    padding-bottom: $pad
     color: #222
 
 hr
@@ -83,6 +82,29 @@ hr
     background-color: $lightBlue
     height: 3px
     margin: $pad 0
+
+input[type="text"],
+input[type="password"]
+    border: 1px solid silver
+    border-radius: 5px
+    box-shadow: inset 0 0 4px silver
+    padding: .3em .5em
+
+textarea
+    resize: vertical
+    overflow: auto
+    border: 1px solid silver
+    border-radius: 5px
+    box-shadow: inset 0 0 10px silver
+    padding: 1em
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    width: 100%
+    height: 250px
+
+label
+    margin-right: 5px
 
 ::selection
     background-color: $darkBlue
@@ -117,6 +139,7 @@ header
     float: right
     color: lighten($lightBlue, 5%)
     padding: 38px 40px
+    margin-right: 16px
     line-height: 1.3
     border-left: 2px solid lighten($lightBlue, 25%)
     border-right: 2px solid lighten($lightBlue, 25%)
@@ -187,11 +210,11 @@ header
     margin: 20px 0
     background-color: white
     color: #222
-    padding: $pad
+    padding: 15px 15px 25px 15px
     box-shadow: 0 1px 3px hsla(0,0,0,.5)
     line-height: 1.3em
     border-radius: 4px
-    overflow: hidden
+    //overflow: hidden
     position: relative // Needed so the dropdown doesn't go behind the content blocks.
     z-index: 1 // Needed so the dropdown doesn't go behind the content blocks.
     p
@@ -271,6 +294,17 @@ header
         display: table
     &:after
         clear: both
+
+.btn
+    padding: 7px 13px
+    color: darken($darkBlue, 10)
+    background-color: lighten($lightBlue, 10)
+    border: 1px solid $darkBlue
+    border-radius: 3px
+    text-decoration: none
+    &:hover
+        background-color: $darkBlue
+        color: lighten($lightBlue, 30)
 
 // ======================================================================
 //      
@@ -356,6 +390,20 @@ header
 // 
 // ======================================================================
 
+.message
+    border: 2px solid $darkBlue
+    color: $lightBlue
+    font-weight: bold
+    margin: 1em 0
+    padding: 1em
+
+.error
+    border: 2px solid red
+    color: red
+    margin: 1em 0
+    padding: 1em
+    ul
+        padding-left: 2em
 
 // ======================================================================
 // 

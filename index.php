@@ -8,16 +8,16 @@
 
 <?php find_selected_page(true); ?>
 
-            <!--  Only for ease of testing login/admin stuff. Delete later.
+            <!--  Only for ease of testing login/admin stuff. Delete later. - ->
             <a href="login.php">login</a>|<a href="admin.php">admin</a>
-            <br/><br/><hr/>  -->
+            <br/><hr/><br/> <!- - -->
 
 <div id="main">
 
         <?php if ($current_page) { ?>
             
-            <h2><?php echo htmlentities($current_page["menu_name"]); ?></h2>
-            <?php echo nl2br(htmlentities($current_page["content"])); ?>
+            <h1><?php echo htmlentities($current_page["menu_name"]); ?></h1>
+            <?php echo $current_page["content"]; ?>
 
 
         <?php } else { ?>

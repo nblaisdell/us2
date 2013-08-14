@@ -46,6 +46,7 @@
         &nbsp;
         <input type="radio" name="visible" value="1" /> Yes
       </p>
+      <br>
       <input type="submit" name="submit" class="btn" value="Create Subject" />
     </form>
     <br />

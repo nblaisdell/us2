@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
       redirect_to("manage_content.php?page={$id}");
     } else {
       // Failure
-      $_SESSION["message"] = "Page update failed.";
+      $_SESSION["message_errors"] = "Page update failed.";
     }
   
   }

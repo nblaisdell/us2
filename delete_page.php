@@ -19,11 +19,16 @@
   if ($result && mysqli_affected_rows($connection) == 1) {
     // Success
     $_SESSION["message"] = "Page deleted.";
-    redirect_to("manage_content.php");
+    //redirect_to("manage_content.php");
   } else {
     // Failure
-    $_SESSION["message"] = "Page deletion failed.";
-    redirect_to("manage_content.php?page={$id}");
+    $_SESSION["message_errors"] = "Page deletion failed.";
+    //redirect_to("manage_content.php?page={$id}");
   }
   
 ?>
+    <?php echo message(); ?>
+    <?php echo message_errors(); ?>
+    <?php echo form_errors($errors); ?>
+
+    <a href="admin.php">back to admin</a>

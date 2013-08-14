@@ -216,6 +216,9 @@
                 $output .= htmlentities($page["menu_name"]);
                 $output .= "</a></li>";
             }
+            $output .= "<a href='new_page.php?subject=";
+            $output .= urlencode($subject["id"]);
+            $output .= "'>+ add page</a>";
             mysqli_free_result($page_set);
             $output .= "</ul></li>";
         }

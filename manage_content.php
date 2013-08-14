@@ -19,7 +19,7 @@
 <div id="main">
     <?php echo message(); ?>
 
-    <a href="admin.php">&laquo; Main Admin Menu</a><br /><br /><br />
+    <a href="admin.php">&laquo; Main Admin Menu</a><br />
 
     <?php if ($current_subject) { ?>
       <h2>Manage Subject</h2>
@@ -27,7 +27,7 @@
       Position: <?php echo $current_subject["position"]; ?><br />
       Visible: <?php echo $current_subject["visible"] == 1 ? 'yes' : 'no'; ?><br />
       <br />
-      <a href="edit_subject.php?subject=<?php echo urlencode($current_subject["id"]); ?>">Edit Subject</a>
+      <a class="btn" href="edit_subject.php?subject=<?php echo urlencode($current_subject["id"]); ?>">Edit Subject</a>
       
       <div style="margin-top: 2em; border-top: 1px solid #000000;">
         <h3>Pages in this subject:</h3>
@@ -45,7 +45,7 @@
         ?>
         </ul>
         <br />
-        + <a href="new_page.php?subject=<?php echo urlencode($current_subject["id"]); ?>">Add a new page to this subject</a>
+        <a class="btn" href="new_page.php?subject=<?php echo urlencode($current_subject["id"]); ?>">+ Add a new page to this subject</a>
       </div>
 
     <?php } elseif ($current_page) { ?>
@@ -53,13 +53,11 @@
       Name: <?php echo htmlentities($current_page["menu_name"]); ?><br />
       Position: <?php echo $current_page["position"]; ?><br />
       Visible: <?php echo $current_page["visible"] == 1 ? 'yes' : 'no'; ?><br />
-      Content:<br />
+      Content:
       <div class="view-content">
         <?php echo nl2br(htmlentities($current_page["content"])); ?>
       </div>
-      <br />
-      <br />
-      <a href="edit_page.php?page=<?php echo urlencode($current_page['id']); ?>">Edit page</a>
+      <a class="btn" href="edit_page.php?page=<?php echo urlencode($current_page['id']); ?>">Edit page</a>
       
     <?php } else { ?>
       Please select a subject or a page from the navigation bar above.

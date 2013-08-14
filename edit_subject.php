@@ -49,11 +49,12 @@ if (isset($_POST['submit'])) {
 
     if ($result && mysqli_affected_rows($connection) >= 0) {
       // Success
-      $_SESSION["message"] = "Subject updated.";
-      redirect_to("manage_content.php");
+      // $_SESSION["message"] = "Subject updated.";
+      $message = "Subject successfully updated.";
+      // redirect_to("manage_content.php");
     } else {
       // Failure
-      $message = "Subject update failed.";
+      $message_errors = "Subject update failed.";
     }
   
   }
@@ -77,6 +78,11 @@ if (isset($_POST['submit'])) {
       if (!empty($message)) {
         echo "<div class=\"message\">" . htmlentities($message) . "</div>";
       }
+    ?>
+    <?php // $message_errors is now also just a variable, doesn't use the SESSION
+      if (!empty($message_errors)) {
+        echo "<div class=\"error\">" . htmlentities($message) . "</div>";
+      } // it doesn't seem like this is actually needed though
     ?>
     <?php echo form_errors($errors); ?>
 
