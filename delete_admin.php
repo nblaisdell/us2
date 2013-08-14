@@ -1,9 +1,7 @@
-<?php $pagetitle = "Delete Admin"; ?>
 <?php require_once("incl/session.php"); ?>
 <?php require_once("incl/db_connection.php"); ?>
 <?php require_once("incl/functions.php"); ?>
-<?php require_once("incl/header.php"); ?>
-<?php include("incl/sidebar.php"); ?>
+
 <?php confirm_logged_in(); ?>
 
 <?php

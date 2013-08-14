@@ -1,10 +1,10 @@
-<?php $pagetitle = "home"; ?>
+<?php $pagetitle = "Log In"; ?>
 <?php require_once("incl/session.php"); ?>
 <?php require_once("incl/db_connection.php"); ?>
 <?php require_once("incl/functions.php"); ?>
 <?php require_once("incl/validation_functions.php"); ?>
-<?php require_once("incl/header.php"); ?>
-<?php include("incl/sidebar.php"); ?>
+<?php include("incl/header.php"); ?>
+
 
 <?php
 $username = "";

@@ -90,105 +90,107 @@ header { background-color: white; padding: 10px 0; }
 /* line 163, ../sass/main.sass */
 #navigation ul li { display: block; position: relative; float: left; }
 /* line 167, ../sass/main.sass */
-#navigation ul li a { display: block; text-decoration: none; color: white; padding: 5px 15px 5px 15px; padding: 12px 15px; white-space: nowrap; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); }
-/* line 177, ../sass/main.sass */
+#navigation ul li a { display: block; line-height: 1.2; text-decoration: none; color: white; padding: 5px 15px 5px 15px; padding: 12px 15px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); }
+/* line 178, ../sass/main.sass */
 #navigation ul li a:hover { background: #5cbbe2; }
-/* line 179, ../sass/main.sass */
-#navigation ul li ul { display: none; width: 225px; border-radius: 0 0 5px 5px; box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3); z-index: 100; position: absolute; }
-/* line 187, ../sass/main.sass */
+/* line 180, ../sass/main.sass */
+#navigation ul li ul { display: none; min-width: 245px; border-radius: 0 0 5px 5px; box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3); z-index: 100; position: absolute; }
+/* line 188, ../sass/main.sass */
 #navigation ul li:hover ul { display: block; position: absolute; }
-/* line 190, ../sass/main.sass */
+/* line 191, ../sass/main.sass */
 #navigation ul li:hover li { float: none; }
-/* line 192, ../sass/main.sass */
-#navigation ul li:hover li a:hover { background: #7fc9e8; text-decoration: underline; }
-/* line 195, ../sass/main.sass */
+/* line 193, ../sass/main.sass */
+#navigation ul li a:hover { color: #105687; text-shadow: none; }
+/* line 197, ../sass/main.sass */
 #navigation ul li:hover a { background: #5cbbe2; }
 
-/* line 197, ../sass/main.sass */
+/* line 199, ../sass/main.sass */
 .pages a { box-shadow: red, 0 0 rgba(255, 255, 255, 0); }
 
-/* line 203, ../sass/main.sass */
+/* line 205, ../sass/main.sass */
 .center { position: relative; max-width: 960px; margin: auto; padding: 0 10px; }
 
-/* line 209, ../sass/main.sass */
+/* line 211, ../sass/main.sass */
 .container { margin: 20px 0; background-color: white; color: #222222; padding: 15px 15px 25px 15px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); line-height: 1.3em; border-radius: 4px; position: relative; z-index: 1; }
-/* line 220, ../sass/main.sass */
-.container p { margin-bottom: 10px; }
 /* line 222, ../sass/main.sass */
-.container p:last-of-type { margin-bottom: 0; }
+.container p { margin-bottom: 10px; }
 /* line 224, ../sass/main.sass */
-.container > ul { margin-left: 20px; }
+.container p:last-of-type { margin-bottom: 0; }
 /* line 226, ../sass/main.sass */
-.container > ul li { list-style: circle; }
+.container > ul { margin-left: 20px; }
 /* line 228, ../sass/main.sass */
+.container > ul li { list-style: circle; }
+/* line 230, ../sass/main.sass */
 .container > img { float: right; padding: 6px; border: 1px solid rgba(0, 0, 0, 0.25); box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3); margin: 0 0 5px 5px; border-radius: 3px; }
-/* line 235, ../sass/main.sass */
+/* line 237, ../sass/main.sass */
 .container nav { margin-top: -15px; margin-right: -15px; margin-bottom: 15px; margin-left: -15px; }
-/* line 241, ../sass/main.sass */
-.container nav li { float: left; }
 /* line 243, ../sass/main.sass */
+.container nav li { float: left; }
+/* line 245, ../sass/main.sass */
 .container nav li a { display: inline-block; padding: 7.5px 15px; color: inherit; text-decoration: none; }
-/* line 248, ../sass/main.sass */
+/* line 250, ../sass/main.sass */
 .container nav li a:hover, .container nav li a.active { background-color: #5cbbe2; color: white; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); }
-@media (max-width: 660px) { /* line 209, ../sass/main.sass */
+@media (max-width: 660px) { /* line 211, ../sass/main.sass */
   .container { padding: 2%; } }
 
-/* line 259, ../sass/main.sass */
+/* line 261, ../sass/main.sass */
 .bottom-nav { padding: 0 10px; font-size: 0.8em; margin-bottom: 10px; }
-/* line 263, ../sass/main.sass */
+/* line 265, ../sass/main.sass */
 .bottom-nav ul { width: 25%; float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border-left: 3px solid #5cbbe2; padding: 0 10px; }
-/* line 269, ../sass/main.sass */
+/* line 271, ../sass/main.sass */
 .bottom-nav a { color: #5cbbe2; display: inline-block; margin: 0.3em 0; }
-/* line 273, ../sass/main.sass */
+/* line 275, ../sass/main.sass */
 .bottom-nav a:hover, .bottom-nav a:focus { color: #1778be; }
-@media (max-width: 660px) { /* line 259, ../sass/main.sass */
+@media (max-width: 660px) { /* line 261, ../sass/main.sass */
   .bottom-nav { padding: 0 2%; } }
 
-/* line 278, ../sass/main.sass */
+/* line 280, ../sass/main.sass */
 .copyright { text-align: center; font-size: 0.8em; opacity: 0.5; display: block; margin-bottom: 10px; text-shadow: 0 1px white; }
 
-/* line 290, ../sass/main.sass */
-.cf { zoom: 1; }
 /* line 292, ../sass/main.sass */
+.cf { zoom: 1; }
+/* line 294, ../sass/main.sass */
 .cf:before, .cf:after { content: ""; display: table; }
-/* line 295, ../sass/main.sass */
+/* line 297, ../sass/main.sass */
 .cf:after { clear: both; }
 
-/* line 298, ../sass/main.sass */
-.btn { padding: 7px 13px; color: #115b91; background-color: #87cdea; border: 1px solid #1778be; border-radius: 3px; text-decoration: none; }
-/* line 305, ../sass/main.sass */
-.btn:hover { background-color: #1778be; color: #def1f9; }
+/* line 300, ../sass/main.sass */
+.btn { padding: 7px 13px; color: #115b91; background-color: #87cdea; border: 1px solid #1778be; border-radius: 3px; text-decoration: none; box-shadow: 0 2px 1px 0 #777777; }
+/* line 308, ../sass/main.sass */
+.btn:hover, .btn:focus { background-color: #1778be; color: #def1f9; }
+/* line 311, ../sass/main.sass */
+.btn:active, .btn:focus { box-shadow: none; margin-top: 2px; margin-bottom: -2px; }
 
-/* line 325, ../sass/main.sass */
+/* line 332, ../sass/main.sass */
 .img-box { box-shadow: 0 0 50px -10px black inset; background-image: url("../img/insulation.jpg"); background-size: 100% auto; height: 200px; padding: 10px; color: white; text-shadow: 0 1px 1px black; position: relative; margin: -15px -20px 0; }
-/* line 336, ../sass/main.sass */
+/* line 343, ../sass/main.sass */
 .img-box .text-box { position: absolute; bottom: 1em; }
-/* line 339, ../sass/main.sass */
+/* line 346, ../sass/main.sass */
 .img-box h1 { font-size: 2.4em; background-color: inherit; }
-/* line 342, ../sass/main.sass */
+/* line 349, ../sass/main.sass */
 .img-box p { margin-top: 1em; font-size: 1.2em; line-height: 1.4em; padding: 0 10px 0 0; color: inherit; }
 
-/* line 350, ../sass/main.sass */
+/* line 357, ../sass/main.sass */
 .img-wrap { width: 49.25%; float: left; position: relative; line-height: 0; }
-/* line 356, ../sass/main.sass */
+/* line 363, ../sass/main.sass */
 .img-wrap img { width: 100%; }
-/* line 359, ../sass/main.sass */
+/* line 366, ../sass/main.sass */
 .img-wrap .img-details { background: rgba(0, 0, 0, 0.5); color: white; text-shadow: 0 1px 1px black; padding: 10px; position: absolute; bottom: 0; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-/* line 368, ../sass/main.sass */
+/* line 375, ../sass/main.sass */
 .img-wrap .img-title { font-size: 0.9em; line-height: 1.1em; font-weight: bold; }
-/* line 372, ../sass/main.sass */
+/* line 379, ../sass/main.sass */
 .img-wrap .img-text { font-size: 0.75em; line-height: 1.2em; display: none; }
-/* line 377, ../sass/main.sass */
+/* line 384, ../sass/main.sass */
 .img-wrap.img2, .img-wrap.img4 { margin-left: 10px; }
-/* line 382, ../sass/main.sass */
+/* line 389, ../sass/main.sass */
 .img-wrap.img3, .img-wrap.img4 { margin-top: 10px; }
 
-/* line 393, ../sass/main.sass */
+/* line 400, ../sass/main.sass */
 .message { border: 2px solid #1778be; color: #5cbbe2; font-weight: bold; margin: 1em 0; padding: 1em; }
 
-/* line 400, ../sass/main.sass */
+/* line 407, ../sass/main.sass */
 .error { border: 2px solid red; color: red; margin: 1em 0; padding: 1em; }
-/* line 405, ../sass/main.sass */
+/* line 412, ../sass/main.sass */
 .error ul { padding-left: 2em; }
 
 /* line 19, ../sass/_shame.sass */

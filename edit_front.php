@@ -1,13 +1,11 @@
-<?php $pagetitle = "edit"; ?>
+<?php $pagetitle = "Admin"; ?>
 <?php $layout_context = "admin"; ?>
 <?php require_once("incl/session.php"); ?>
 <?php require_once("incl/db_connection.php"); ?>
 <?php require_once("incl/functions.php"); ?>
 <?php require_once("incl/validation_functions.php"); ?>
-
+<?php include("incl/header.php"); ?>
 <?php confirm_logged_in(); ?>
-<?php require_once("incl/header.php"); ?>
-<?php include("incl/sidebar.php"); ?>
 
 
 <?php // find_selected_page(); // is this needed? ?>

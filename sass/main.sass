@@ -166,20 +166,21 @@ header
         float: left
         a
             display: block
+            line-height: 1.2
             text-decoration: none
             color: #ffffff
             padding: 5px 15px 5px 15px
             padding: 12px 15px
             // background: $darkBlue
-            white-space: nowrap
-            text-shadow: 0 1px 1px hsla(0,0,0,.5)
+            // white-space: nowrap
+            text-shadow: 0 1px 1px hsla(0,0,0,.6)
             // box-shadow: $topNavShadow, 0 1px hsla(0,0,100,.75)
             &:hover 
                 background: $lightBlue
         ul
             display: none
             // box-shadow: 0
-            width: 225px
+            min-width: 245px
             border-radius: 0 0 5px 5px
             box-shadow: 0 2px 1px hsla(0,0,0,.3)
             z-index: 100
@@ -189,9 +190,10 @@ header
             position: absolute
         &:hover li
             float: none
-            a:hover 
-                background: lighten($lightBlue,8%)
-                text-decoration: underline
+        a:hover 
+            //background: lighten($lightBlue,8)
+            color: darken($darkBlue,12)
+            text-shadow: none
         &:hover a
             background: $lightBlue
 .pages a
@@ -302,9 +304,14 @@ header
     border: 1px solid $darkBlue
     border-radius: 3px
     text-decoration: none
-    &:hover
+    box-shadow: 0 2px 1px 0 #777
+    &:hover, &:focus
         background-color: $darkBlue
         color: lighten($lightBlue, 30)
+    &:active, &:focus
+        box-shadow: none
+        margin-top: 2px
+        margin-bottom: -2px
 
 // ======================================================================
 //      

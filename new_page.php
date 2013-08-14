@@ -1,13 +1,11 @@
-<?php $pagetitle = "edit"; ?>
+<?php $pagetitle = "Admin"; ?>
 <?php $layout_context = "admin"; ?>
 <?php require_once("incl/session.php"); ?>
 <?php require_once("incl/db_connection.php"); ?>
 <?php require_once("incl/functions.php"); ?>
 <?php require_once("incl/validation_functions.php"); ?>
-
+<?php include("incl/header.php"); ?>
 <?php confirm_logged_in(); ?>
-<?php require_once("incl/header.php"); ?>
-<?php include("incl/sidebar.php"); ?>
 
 <?php find_selected_page(); ?>
 
@@ -28,8 +26,8 @@ if (isset($_POST['submit'])) {
   $required_fields = array("menu_name", "position", "visible", "content");
   validate_presences($required_fields);
   
-  $fields_with_max_lengths = array("menu_name" => 30);
-  validate_max_lengths($fields_with_max_lengths);
+  // $fields_with_max_lengths = array("menu_name" => 30);
+  // validate_max_lengths($fields_with_max_lengths);
   
   if (empty($errors)) {
     // Perform Create
