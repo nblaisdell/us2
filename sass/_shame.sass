@@ -23,7 +23,14 @@ $topNavShadow: 0 12px 6px -10px hsla(0,0,0,.4) inset
 
 // to test: <div class="message">This is a test with things<ul><li>first thing</li><li>second thing</li></ul></div>
 
-
+%cf
+    zoom: 1
+    &:before,
+    &:after
+        content: ""
+        display: table
+    &:after
+        clear: both
 
 
 // unslider code
@@ -31,20 +38,30 @@ $topNavShadow: 0 12px 6px -10px hsla(0,0,0,.4) inset
 .banner
     position: relative // needed for unslider to work
     overflow: auto // needed for unslider to work
+    // border: 3px solid $darkBlue
+    // border: 3px solid white
+    // box-shadow: 0 0 2px rgba(0,0,0,.5)
     li
         list-style: none // needed for unslider to work
         float: left // needed for unslider to work
     a
         text-decoration: none
         color: white
+    img
+        width: 100%
+        height: auto
     .img-info
         text-shadow: 0 1px 1px hsla(0, 0, 0, .5)
         position: absolute
         bottom: 5px
         background-color: hsla(0, 0, 0, .3)
-        width: 902px
-        height: 90px
+        width: auto // 100%
+        width: 20%
+        height: auto // 90px
         padding: 15px
+        -webkit-box-sizing: border-box
+        -moz-box-sizing: border-box
+        box-sizing: border-box
     .img-title
         font-size: 1.3em
         padding-bottom: 10px
@@ -55,19 +72,16 @@ $topNavShadow: 0 12px 6px -10px hsla(0,0,0,.4) inset
 
 .banner-wrap
     height: 380px
+    width: 57%
+    float: right
 
+.welcome
+    // width: 40%
+    // margin-right: 3%
+    // float: left
 
-
-
-
-
-
-
-
-
-
-
-
+#main
+    @extend %cf
 
 
 
