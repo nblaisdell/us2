@@ -7,10 +7,9 @@
     <title>US2 - <?php echo $pagetitle; ?><?php if ($layout_context == "admin") { echo " Admin"; } ?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
+    <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico'>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/shame.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="US2">
 </head>

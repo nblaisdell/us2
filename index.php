@@ -14,10 +14,11 @@
 <div id="main">
 
         <?php if ($current_page) { ?>
-            
-            <h1><?php echo htmlentities($current_page["menu_name"]); ?></h1>
-            <?php echo $current_page["content"]; ?>
 
+            <div class="page">
+                <h1><?php echo htmlentities($current_page["menu_name"]); ?></h1>
+                <?php echo nl2br($current_page["content"]); ?>
+            </div>
 
         <?php } else { ?>
 

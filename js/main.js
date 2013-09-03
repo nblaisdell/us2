@@ -48,6 +48,6 @@ $('.top-search').on('click', function() {
 //   });
 // });
 
-function delay_blog(){
-    window.location = "../javascriptredirect.php"
-}
+// function delay_blog(){
+//     window.location = "../javascriptredirect.php"
+// }
